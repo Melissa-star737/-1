@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+</head>
+<body>
+
+    <!-- ==================== ШАПКА САЙТА ==================== -->
+    <header>
+        <h1>Портфолио моих работ</h1>
+        <p>
+            Я начала заниматься программированием в <b>марте 2025</b>,<br>
+            но через некоторое время я забросила это дело.<br>
+            <i>Я вернулась к этому делу в <b>феврале 2026.</b></i>
+        </p>
+        <a href="https://t.me/+wwj4Ro_ehS8yNjU6" target="_blank">
+            Мой ТГК по программированию
+        </a>
+    </header>
+
+    <!-- ==================== НАВИГАЦИЯ ==================== -->
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/blog">Блог</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- ==================== ОСНОВНОЙ КОНТЕНТ ==================== -->
+    <main>
+        
+        <!-- Портфолио: проекты -->
+        <section class="portfolio">
+            <h2>Мои проекты</h2>
+            
+            <!-- Проект 1 -->
+            <article>
+                <figure>
+                    <figcaption><b>Первый код</b></figcaption>
+                    <a href="1kod.png" target="_blank">
+                        <img src="1kod.png" alt="первый код" width="300">
+                    </a>
+                </figure>
+            </article>
+
+            <!-- Проект 2 -->
+            <article>
+                <h3>Второй проект</h3>
+                <p>Код проекта:</p>
+                <a href="2kod.png" target="_blank">
+                    <img src="2kod.png" alt="второй код" width="300">
+                </a>
+                <a href="21kod.png" target="_blank">
+                    <img src="21kod.png" alt="второй код" width="300">
+                </a>
+                <p>Результат:</p>
+                <a href="2kodrez.png" target="_blank">
+                    <img src="2kodrez.png" alt="результат 2 кода" width="300">
+                </a>
+                <a href="2kodrez2.png" target="_blank">
+                    <img src="2kodrez2.png" alt="результат 2 кода" width="300">
+                </a>
+            </article>
+
+            <!-- Проект 3 -->
+            <article>
+                <h3>Третий проект</h3>
+                <p>Код проекта:</p>
+                <a href="3kod.png" target="_blank">
+                    <img src="3kod.png" alt="третий код" width="300">
+                </a>
+                <a href="32kod.png" target="_blank">
+                    <img src="32kod.png" alt="третий код" width="300">
+                </a>
+                <p>Результат:</p>
+                <a href="3kodrez.png" target="_blank">
+                    <img src="3kodrez.png" alt="результат 3 кода" width="300">
+                </a>
+                <a href="3kodrez2.png" target="_blank">
+                    <img src="3kodrez2.png" alt="результат 3 кода" width="300">
+                </a>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Форма: отправка работы -->
+        <section class="submit-work">
+            <h3>Отправьте свою работу!</h3>
+            <form enctype="multipart/form-data" method="post" action="http://localhost:8080/postfile.php">
+                <fieldset>
+                    <legend>Загрузка файла</legend>
+                    <p>
+                        <input type="file" name="file" multiple />
+                    </p>
+                    <p>
+                        <input type="submit" value="Отправить" />
+                    </p>
+                </fieldset>
+            </form>
+            
+            <form method="get">
+                <fieldset>
+                    <legend>Выберите язык</legend>
+                    <p>
+                        <label for="lang">Язык программирования:</label>
+                        <select id="lang" name="lang">
+                            <optgroup label="Интерпретируемые">
+                                <option value="Python">Python</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="PHP, Ruby">PHP, Ruby</option>
+                            </optgroup>
+                            <optgroup label="Компилируемые">
+                                <option value="C, C++">C, C++</option>
+                                <option value="Rust">Rust</option>
+                                <option value="Go">Go</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="submit" value="Отправить" />
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Вход и регистрация -->
+        <section class="auth">
+            <!-- Форма входа -->
+            <form method="get" action="index.html">
+                <h3>Вход в систему</h3>
+                <fieldset>
+                    <p>
+                        <label for="login">Логин:</label>
+                        <input type="text" required id="login" name="login"/>
+                    </p>
+                    <p>
+                        <label for="password">Пароль:</label>
+                        <input type="password" required id="password" name="password"/>
+                    </p>
+                    <p>
+                        <input type="submit" value="Войти">
+                        <button type="reset">Отмена</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <hr>
+
+            <!-- Форма регистрации -->
+            <form method="get" action="register.html"> <!-- ✅ Укажите реальный обработчик -->
+                <h3>Регистрация</h3>
+                <fieldset>
+                    <p>
+                        <label for="phone">Телефон:</label>
+                        <input type="text" placeholder="+1-234-567-8901"
+                                pattern="\+\d-\d{3}-\d{3}-\d{4}" id="phone" name="phone"/>
+                    </p>
+                    <p>
+                        <label for="age">Возраст:</label>
+                        <input type="number" min="1" max="100" value="18" id="age" name="age"/>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" 
+                              placeholder="user@gmail.com">
+                    </p>
+                    <p>
+                        <label for="url">URL:</label>
+                        <input type="url" id="url" name="url">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Укажите пол</legend>
+                    <p>
+                        <input type="radio" id="man" name="gender" value="man" checked>
+                        <label for="man">мужской</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="woman" name="gender" value="woman">
+                        <label for="woman">женский</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Введите дату рождения</legend>
+                    <p>
+                        <input type="date" id="date" name="date"/>
+                    </p>
+                </fieldset>
+                    
+                <fieldset>
+                    <legend>Выберите технологию</legend>
+                    <p>
+                        <input type="checkbox" id="html5" name="html5" checked>
+                        <label for="html5">HTML5</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="dotnet" name="dotnet">
+                        <label for="dotnet">.NET</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="java" name="java">
+                        <label for="java">Java</label>
+                    </p>
+                </fieldset>
+                        
+                <p>
+                    <button type="submit">Зарегистрироваться</button>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Рейтинг и комментарии -->
+        <section class="feedback">
+            <h2>Оцените мои старания 0-0</h2>
+            <form method="post" action="feedback.php"> <!-- ✅ Укажите обработчик -->
+                <p>
+                    <label for="rating">Рейтинг:</label>
+                    0
+                    <input type="range" id="rating" name="rating" 
+                           min="0" max="10" step="1" value="10">
+                    10
+                </p>
+                <p>
+                    <label for="comment">Ваш комментарий:</label><br/>
+                    <textarea id="comment" name="comment" placeholder="Написать комментарий"
+                        cols="30" rows="7"></textarea> 
+                </p>
+                <p>
+                    <input type="submit" value="Добавить"/>
+                </p>
+            </form>
+        </section>
+
+        <!-- Справочная информация -->
+        <aside class="reference-block">
+            <h2>HTML - это...</h2>
+            <iframe src="https://ru.wikipedia.org/wiki/HTML" 
+                    width="400" height="200" 
+                    title="Статья про HTML на Википедии">
+            </iframe>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <!-- ==================== РЕКЛАМА ==================== -->
+    <aside class="sidebar-ad" style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+        <h2>Скидки на Футболку Brawl Stars!</h2>
+        <p>
+            Только до 31 марта футболка Brawl Stars с Вороном стоит на 10 000 рублей дешевле. 
+            В подарок вы получите бесплатный чупа-чупс. 
+            <a href="buy/id=3">Купить</a>
+        </p>
+    </aside>
+
+    <hr>
+
+    <!-- ==================== ПОДВАЛ САЙТА ==================== -->
+    <footer>
+        <p>
+            <a href="/license">Лицензионное соглашение</a> | 
+            <a href="/about">О сайте</a> | 
+            <a href="/donation">Donations</a>
+        </p>
+        <p><small>Copyright © Мелисса, 2026. Все права защищены.</small></p>
+    </footer>
+
+</body>
+</html>
